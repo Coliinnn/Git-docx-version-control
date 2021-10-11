@@ -17,10 +17,13 @@ git --version
 brew install pandoc
 pandoc --version
 
-HOOK_PATH="../.git/hooks"
-echo $HOOK_PATH
-mkdir $HOOK_PATH
-cp post-commit.sh $HOOK_PATH/post-commit
-cp pre-commit.sh $HOOK_PATH/pre-commit
-chmod u+x $HOOK_PATH/post-commit
-chmod u+x $HOOK_PATH/pre-commit
+HOOK_PATH_GIT="../.git"
+echo $HOOK_PATH_GIT
+HOOK_PATH_HOOKS="../.git/hooks"
+echo $HOOK_PATH_HOOKS
+mkdir $HOOK_PATH_GIT
+mkdir $HOOK_PATH_HOOKS
+cp post-commit.sh $HOOK_PATH_HOOKS/post-commit
+cp pre-commit.sh $HOOK_PATH_HOOKS/pre-commit
+chmod u+x $HOOK_PATH_HOOKS/post-commit
+chmod u+x $HOOK_PATH_HOOKS/pre-commit
